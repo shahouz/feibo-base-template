@@ -1,0 +1,31 @@
+@charset "utf-8";
+body *{word-wrap: break-word;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+p{-webkit-margin-before: 0; -webkit-margin-after: 0px;}
+body,button,input,select,textarea{font:14px/1.5 "microsoft yahei",tahoma,arial,\5b8b\4f53;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+small{font-size:12px;}
+ul,ol{list-style:none;}
+a{text-decoration:none; color: #515151;}
+/*a:visited{background: #f00;}*/
+a:hover{text-decoration:none;}
+sup{vertical-align:text-top;}   
+sub{vertical-align:text-bottom;}
+legend{color:#000;}
+fieldset,img{border:0;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+body{color:#505050; position: relative;}
+textarea:focus,input:focus,select:focus,a{outline:none;}
+textarea{padding-left: 2px; border: #b3d8f1 solid 1px;}
+select{border: #b3d8f1 solid 1px;}
+span, a{display: inline-block;}
+input:focus, textarea:focus{
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-user-modify: read-write-plaintext-only;}
+/*clear*/
+.clearfix:after{content:" ";height:0;visibility:hidden;display:block;clear:both;}
+* html .clearfix{zoom:1;}/*IE6*/
+*:first-child+html .clearfix{zoom:1;}/*IE7*/
