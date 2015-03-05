@@ -1,26 +1,35 @@
-# grunt-init-jquery
+# grunt-init-feiboBase
 
-> Create a jQuery plugin with [grunt-init][], including QUnit unit tests.
+> 飞博基础页面脚手架
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
-## Installation
-If you haven't already done so, install [grunt-init][].
+使用前请先确认安装了 Grunt 和 Grunt-init。
 
-Once grunt-init is installed, place this template in your `~/.grunt-init/` directory. It's recommended that you use git to clone this template into that directory, as follows:
 
-```
+## 安装Grunt 和 Grunt-init：
+
+npm uninstall grunt -g
+npm install grunt-cli -g
+npm install grunt-init -g
+
+
+## 安装模板：
+
 git clone https://github.com/shahouz/feibo-base-template.git ~/.grunt-init/feibo-base
-```
 
-_(Windows users, see [the documentation][grunt-init] for the correct destination directory path)_
+_(在Windows平台是%USERPROFILE%\.grunt-init\目录)_
 
-## Usage
+会将模板下载到你本地 grunt-init 目录下。
 
-At the command-line, cd into an empty directory, run this command and follow the prompts.
 
-```
-grunt-init jquery
-```
+## 用模板创建项目：
 
-_Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files._
+定位到项目目录，执行以下命令：
+
+使用grunt-init --help来获取程序帮助以及列出可用模板清单
+使用grunt-init TEMPLATE并基于可用模板创建一个项目
+使用grunt-init /path/to/TEMPLATE基于任意其他目录中可用的模板创建一个项目
+
+大多数的模板都应该在当前目录(执行命令的目录)中生成它们的文件(自动生成的项目相关的文件)，因此，如果你不想覆盖现有的文件，注意一定要切换到一个新目录中来保证文件生成到其他目录。
+
