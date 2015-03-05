@@ -1,15 +1,15 @@
 /*
- * grunt-init-jquery
- * https://gruntjs.com/
+ * grunt-init-feiboBase
+ * https://www.feibo.com/
  *
- * Copyright (c) 2013 "Cowboy" Ben Alman, contributors
+ * Copyright (c) 2015 "tdl" vqianduan, contributors
  * Licensed under the MIT license.
  */
 
 'use strict';
 
 // Basic template description.
-exports.description = 'Create a jQuery plugin, including QUnit unit tests.';
+exports.description = 'feibo-base-template';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = '_Project name_ should not contain "jquery" or "js" and ' +
@@ -46,16 +46,17 @@ exports.template = function(grunt, init, done) {
       value = value.replace(/jquery/gi, 'jQuery');
       done(null, value);
     }),
-    init.prompt('description', 'The best jQuery plugin ever.'),
+    init.prompt('description', 'by feibo.'),
     init.prompt('version'),
-    init.prompt('repository'),
-    init.prompt('homepage'),
+    //init.prompt('repository'),
+    //init.prompt('homepage'),
     init.prompt('bugs'),
     init.prompt('licenses', 'MIT'),
     init.prompt('author_name'),
     init.prompt('author_email'),
-    init.prompt('author_url'),
-    init.prompt('jquery_version')
+    //init.prompt('author_url'),
+    init.prompt('jquery_version','1.9.0'),
+    init.prompt('zepto_version','1.1.6')
   ], function(err, props) {
     // A few additional properties.
     props.jqueryjson = props.name + '.jquery.json';
