@@ -6,28 +6,39 @@
   <meta name="keywords" content="{%= title %}" />
   <meta name="description" content="{%= description %}" />
   <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=no" />
+  <meta name="apple-touch-fullscreen" content="no"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-  <meta name="format-detection" content="telephone=no"/>
+  <meta name="format-detection" content="telephone=yes,email=yes"/>
   <title>{%= title || name %}</title>
-
-  <link href="statics/css/global.css" rel="stylesheet" type="text/css" />
-
-  <link rel="shortcut icon" href="">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
-
-  <!--[if lt IE 9]><script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script><![endif]-->
+  <link rel="shortcut icon" href="statics/images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon-precomposed" href="statics/images/favicon.ico" />
+  <link rel="stylesheet" href="statics/css/global.css" type="text/css" />
+  <!--[if lt IE 9]><script src="statics/libs/html5.min.js"></script><![endif]-->
 </head>
 <body>
 
   <div class="container"></div>
+
   <!--
   <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-  <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="/statics/libs/jquery.min.js">\x3C/script>')</script>-->
+  <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="/statics/libs/jquery.min.js">\x3C/script>')</script>
   <script src="http://libs.baidu.com/zepto/0.8/zepto.min.js"></script>
   <script type="text/javascript">window.Zepto || document.write('<script type="text/javascript" src="/statics/libs/zepto.min.js">\x3C/script>')</script>
+  -->
 
-  <script src="statics/js/global.js"></script>
+  <script>
+    // 开发环境 独立js
+    if (location.href.indexOf("?tdev") > 0) {
+      document.write('<script type="text/javascript" src="statics/libs/zepto.min.js">\x3C/script>');
+      document.write('<script type="text/javascript" src="statics/js/global.js">\x3C/script>');
+    }
+    // 正式环境 合并js
+    else {
+      document.write('<script type="text/javascript" src="statics/js/vqd.js">\x3C/script>');
+    }
+  </script>
   <div class="tongji">放统计代码</div>
 </body>
 </html>
