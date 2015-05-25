@@ -22,10 +22,127 @@ textarea:focus,input:focus,select:focus,a{outline:none;}
 textarea{padding-left: 2px; border: #b3d8f1 solid 1px;}
 select{border: #b3d8f1 solid 1px;}
 span, a{display: inline-block;}
+input{
+	-webkit-appearance: none;
+}
 input:focus, textarea:focus{
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-	-webkit-user-modify: read-write-plaintext-only;}
+	-webkit-user-modify: read-write-plaintext-only;
+	-webkit-touch-callout: none !important;
+	-webkit-user-scalable:none;
+	-webkit-user-select:none;
+}
+
 /*clear*/
 .clearfix:after{content:" ";height:0;visibility:hidden;display:block;clear:both;}
 * html .clearfix{zoom:1;}/*IE6*/
 *:first-child+html .clearfix{zoom:1;}/*IE7*/
+*, *::active, *::focus {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)!important;
+	-webkit-focus-ring-color: rgba(0, 0, 0, 0)!important;
+	-webkit-tap-highlight-color: transparent;
+	outline: none!important;
+	-webkit-appearance: none;
+	-webkit-touch-callout: none !important;
+	-webkit-user-scalable:none;
+	-webkit-user-select:none;
+}
+body{
+	max-width:640px;
+	font-size:0%;
+	
+}
+
+/* 弹出提示 */
+.notice{
+	position:fixed;
+	width:90%;
+	top:30%;
+	left:5%;
+	right:5%;
+	z-index:99;
+	background:#fff;
+	border-radius:6px;
+	-webkit-border-raidus:6px;
+	font-size:0.8rem;
+	color:#000;
+	text-align:center;
+	padding-bottom:20px;
+}
+.notice .main{
+	margin-bottom:20px;
+	display:block;
+	padding:40px;
+	border-bottom:1px solid #cac6c3;
+}
+.notice .done{
+	width:4.75rem;
+	height:1.85rem;
+	line-height:1.85rem;
+	text-align:center;
+	font-size:0.7rem;
+	color:#000;
+	background:#fcd652;
+	border:none;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+}
+/* 阴影遮罩 */
+.shadow{
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:66;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.3);
+	content:"";
+}
+/* 音乐播放 */
+#music{
+	position:absolute;
+	right:0.4rem;
+	top:0.4rem;
+	z-index:500;
+	width:1.6rem;
+	height:1.6rem;
+	visibility:hidden;
+	visibility: visible;
+	opacity: 0.8;
+}
+.music{width:100%;height:100%;background:url(../images/music.png) no-repeat center center;background-size:100%}
+.play{animation:r 1.2s linear infinite;-webkit-animation:r 1.2s linear infinite}
+#music>span{color:#fff;position:absolute;left:-124px;top:0;line-height:64px;font-size:36px;opacity:0;-webkit-transition:all 0.3s linear;transition:all 0.3s linear}
+#music>span.zshow{left:-86px;opacity:1}
+.musics{width:18px;height:26px;position:absolute;left:-12px;bottom:0}
+.musics span{position:absolute;right:0;bottom:0;width:100%;height:100%;background:url(../images/musics.png) no-repeat center center;background-size:100%}
+@keyframes r{0%{transform:rotate(0)}100%{transform:rotate(-360deg)}}
+@-webkit-keyframes r{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(-360deg)}}
+/* 加载界面 */
+.loading{
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0%;
+	right:0;
+	width:100%;
+	height:100%;
+	background:#fcd652;
+	z-index:188;
+}
+.loadingBar{
+	position:absolute;
+	left:0;
+	top:0;
+	width:0%;
+	height:3px;
+	background:#39c600;
+	transition: width 0.5s;
+	-webkit-transition: width 0.5s;
+}
+.loading.loadingFlower{
+	background:url(../images/lloading.gif) #fcd652 center no-repeat;
+	background-size:32px;
+}

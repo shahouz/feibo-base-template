@@ -47,13 +47,13 @@ exports.template = function(grunt, init, done) {
       done(null, value);
     }),
     init.prompt('description', 'by feibo.'),
-    init.prompt('version'),
+    init.prompt('version', '1.0'),
     //init.prompt('repository'),
     //init.prompt('homepage'),
     init.prompt('bugs'),
-    init.prompt('licenses', 'MIT'),
-    init.prompt('author_name'),
-    init.prompt('author_email'),
+    //init.prompt('licenses', 'MIT'),
+    init.prompt('author_name', 'vqd'),
+    init.prompt('author_email', 'vqianduan@hotmail.com'),
     //init.prompt('author_url'),
     init.prompt('jquery_version','1.9.0'),
     init.prompt('zepto_version','1.1.6')
